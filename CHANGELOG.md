@@ -1,3 +1,20 @@
+# [2.2.0](https://github.com/josemurilors/github-standards/compare/v2.1.1...v2.2.0) (2026-08-05)
+
+
+### Bug Fixes
+
+* add NODE_AUTH_TOKEN for npm registry authentication ([8d0b1f8](https://github.com/josemurilors/github-standards/commit/8d0b1f810074e4a8244ace59cbe4161c046fc1e2))
+* correct repository URLs in package.json ([6b847ce](https://github.com/josemurilors/github-standards/commit/6b847ce8a7ea08d680c1bbcfc73ca9491ecaeb90))
+* create project subdirectory in init command instead of using cwd ([3779e63](https://github.com/josemurilors/github-standards/commit/3779e63bd7d26113aae63b98dd2d01f7b089b8dc))
+* skip commit-msg hooks in CI environment ([ab86f7e](https://github.com/josemurilors/github-standards/commit/ab86f7edd024df4debe0af8421bd4e68459d36ca))
+* skip pre-commit hooks in CI environment ([d57d2c8](https://github.com/josemurilors/github-standards/commit/d57d2c83cbff8987b7da1768cc870a69ce71a846))
+* track package-lock.json for npm ci in release workflow ([6cf028d](https://github.com/josemurilors/github-standards/commit/6cf028dac89ff26b98f51f38661bf01b9b226da3))
+
+
+### Features
+
+* add npm publishing to semantic-release ([adf071c](https://github.com/josemurilors/github-standards/commit/adf071ccca9a456093849d233ce4a7206f5c4efc))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
