@@ -28,7 +28,15 @@ async function init(options) {
       return;
     }
 
-    const targetDir = process.cwd();
+    const targetDir = path.join(process.cwd(), projectInfo.name);
+
+    if (await fs.pathExists(targetDir)) {
+      console.error(chalk.red(`\n✗ Error: Directory "${projectInfo.name}" already exists`));
+      process.exit(1);
+    }
+
+    console.log(chalk.cyan(`\n📁 Creating project directory: ${projectInfo.name}/`));
+    await fs.ensureDir(targetDir);
 
     console.log(chalk.cyan('\n📁 Creating project structure...'));
 
@@ -42,6 +50,14 @@ async function init(options) {
     console.log(chalk.cyan('\n🌐 Setting language mode...'));
     await setLanguageMode(targetDir, projectInfo.mode);
     console.log(chalk.green(`  ✓ Mode set to: ${projectInfo.mode}`));
+
+    console.log(chalk.cyan('\n📦 Initializing git repository...'));
+    try {
+      execSync('git init', { stdio: 'inherit', cwd: targetDir });
+      console.log(chalk.green('  ✓ Git repository initialized'));
+    } catch (error) {
+      console.log(chalk.yellow('  ! Could not initialize git repository. Run `git init` manually.'));
+    }
 
     if (!options.skipInstall) {
       console.log(chalk.cyan('\n📦 Installing dependencies...'));
@@ -63,9 +79,9 @@ async function init(options) {
 
     console.log(chalk.green.bold('\n✨ Project initialized successfully!\n'));
     console.log(chalk.white('Next steps:'));
-    console.log(chalk.gray('  1. Review the generated files'));
-    console.log(chalk.gray('  2. Customize README.md and README.pt-BR.md'));
-    console.log(chalk.gray('  3. Initialize git: git init'));
+    console.log(chalk.gray(`  1. cd ${projectInfo.name}`));
+    console.log(chalk.gray('  2. Review the generated files'));
+    console.log(chalk.gray('  3. Customize README.md and README.pt-BR.md'));
     console.log(chalk.gray('  4. Make your first commit'));
     console.log(chalk.gray('  5. Push to GitHub and configure branch protection rules'));
     console.log('');
