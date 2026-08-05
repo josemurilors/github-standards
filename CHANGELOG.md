@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/josemurilors/github-standards/compare/v2.2.0...v2.3.0) (2026-08-05)
+
+
+### Features
+
+* swap READMEs based on language mode ([0aff9d0](https://github.com/josemurilors/github-standards/commit/0aff9d0b3b81b8a8f880cc4c6f2abf0fb4a40e5b))
+
 # [2.2.0](https://github.com/josemurilors/github-standards/compare/v2.1.1...v2.2.0) (2026-08-05)
 
 
