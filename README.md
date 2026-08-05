@@ -6,40 +6,41 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Secret Scanning](https://img.shields.io/badge/Secret%20Scanning-Gitleaks-brightgreen)](SECURITY.md)
 
-## Overview
+> Standardize GitHub repositories with bilingual documentation, secure CI/CD, and 4-layer secret protection for Vibe Coding.
 
-This skill standardizes GitHub repositories with bilingual documentation (EN/PT-BR), secure CI/CD pipelines, open-source governance, code validation, and **4-layer secret protection for Vibe Coding**.
+## About
+
+This skill implements professional standards for GitHub repositories, combining bilingual documentation (EN/PT-BR), automated CI/CD pipelines, open-source governance, and robust security against secret leaks in AI-assisted development.
 
 ## Features
 
-- **Bilingual Documentation**: EN/PT-BR README with parity validation and **switchable language modes**
-- **CI/CD Pipeline**: GitHub Actions for linting, link checking, commit validation, and **secret scanning**
-- **Vibe Coding Security**: 4-layer defense against secret leaks in AI-assisted development
-- **Conventional Commits**: Enforced commit message standards with husky + commitlint
-- **Security**: Dependabot, Gitleaks, GitHub Push Protection, and branch protection rules
-- **Automation**: semantic-release for automated versioning and changelog generation
-- **CLI Tool**: Scaffold new projects or apply standards to existing ones
-- **AI Agent Integration**: Install skill globally in OpenCode, Claude Code, Codex, Cursor, and more
+- **Bilingual Documentation** - EN/PT-BR README with parity validation and switchable language modes
+- **CI/CD Pipeline** - GitHub Actions for linting, link checking, commit validation, and secret scanning
+- **Vibe Coding Security** - 4-layer defense against secret leaks
+- **Conventional Commits** - Commit message standards with husky + commitlint
+- **Automation** - semantic-release for automated versioning and changelog generation
+- **CLI Tool** - Scaffold new projects or apply standards to existing ones
+- **AI Integration** - Install globally in OpenCode, Claude Code, Codex, Cursor, and more
 
-## CLI Installation
+## Installation
 
-Install globally to use as a CLI tool:
+### Global CLI
 
 ```bash
 npm install -g github-standards-cli
 ```
 
-### CLI Commands
+### Available Commands
 
 ```bash
-# Initialize a new project with GitHub standards
+# Initialize a new project
 github-standards init
 github-standards init --name my-project --mode pt-br-first
 
 # Apply standards to an existing project
-github-standards setup --mode en-first
+github-standards setup --mode pt-br-first
 
-# Validate current project configuration
+# Validate current configuration
 github-standards validate
 
 # Install skill globally in AI agents
@@ -49,7 +50,7 @@ github-standards install-skill --all
 
 ## AI Agent Integration
 
-Install the skill globally in supported AI agents to automatically apply GitHub standards in all your projects:
+Install the skill globally to automatically apply GitHub standards in all your projects:
 
 ```bash
 github-standards install-skill
@@ -59,13 +60,13 @@ github-standards install-skill
 
 | Agent | Status | Directory |
 |-------|--------|-----------|
-| 🔧 OpenCode | ✅ Supported | `~/.agents/skills/` |
-| 🤖 Claude Code | ✅ Supported | `~/.claude/skills/` |
-| 📦 Codex | ✅ Supported | `~/.codex/skills/` |
-| 🎯 Cursor | ✅ Supported | `~/.cursor/skills/` |
-| 🐙 GitHub Copilot | ✅ Supported | `~/.config/github-copilot/skills/` |
-| 🦾 OpenClaude | ✅ Supported | `~/.openclaude/skills/` |
-| ⚡ Hermes | ✅ Supported | `~/.hermes/skills/` |
+| OpenCode | Supported | `~/.agents/skills/` |
+| Claude Code | Supported | `~/.claude/skills/` |
+| Codex | Supported | `~/.codex/skills/` |
+| Cursor | Supported | `~/.cursor/skills/` |
+| GitHub Copilot | Supported | `~/.config/github-copilot/skills/` |
+| OpenClaude | Supported | `~/.openclaude/skills/` |
+| Hermes | Supported | `~/.hermes/skills/` |
 
 After installation, the skill will be automatically available in all projects with git.
 
@@ -93,7 +94,7 @@ npm run mode:en
 npm run mode:pt
 ```
 
-### 4. Run Validation Locally
+### 4. Run Validation
 
 ```bash
 npm run lint:md          # Lint Markdown
@@ -104,7 +105,7 @@ npm test                 # Run all validations
 
 ## Vibe Coding Security: 4-Layer Defense
 
-This skill implements a **defense-in-depth** strategy to prevent secret leaks in AI-assisted development:
+**Defense-in-depth** strategy to prevent secret leaks in AI-assisted development:
 
 | Layer | Defense | Tool | Function |
 |-------|---------|------|----------|
@@ -113,9 +114,9 @@ This skill implements a **defense-in-depth** strategy to prevent secret leaks in
 | 3 | Cloud | GitHub Push Protection | Blocks pushes containing secrets |
 | 4 | AI | .cursorrules + SECURITY.md | Instructs AI to never generate insecure code |
 
-### Secret Detection Patterns
+### Detected Patterns
 
-Gitleaks detects 15+ secret types including:
+Gitleaks detects 15+ secret types:
 
 - AWS Access Keys (`AKIA*`)
 - OpenAI API Keys (`sk-proj-*`)
@@ -135,6 +136,29 @@ If a secret leaks:
 4. **Post-incident review**
 
 See [SECURITY.md](SECURITY.md) for full details.
+
+## Language Modes
+
+The skill supports two modes for bilingual documentation:
+
+### EN-First (Default)
+
+- `README.md` is the source of truth (English)
+- `README.pt-BR.md` is the translation (Portuguese)
+- **Use for**: International projects, open-source
+
+### PT-BR-First
+
+- `README.pt-BR.md` is the source of truth (Portuguese)
+- `README.md` is the translation (English)
+- **Use for**: Local projects, Brazilian companies
+
+Switch modes with:
+
+```bash
+npm run mode:en    # English first
+npm run mode:pt    # Portuguese first
+```
 
 ## Project Structure
 
@@ -156,7 +180,7 @@ See [SECURITY.md](SECURITY.md) for full details.
 ├── README.pt-BR.md             # Portuguese documentation
 ├── CONTRIBUTING.md             # Contribution guidelines
 ├── CODE_OF_CONDUCT.md          # Community standards
-├── SECURITY.md                 # Security policy + 4-layer defense
+├── SECURITY.md                 # Security policy
 ├── CHANGELOG.md                # Version history
 ├── .cursorrules                # AI security rules
 ├── .gitleaks.toml              # Secret detection config
@@ -168,29 +192,6 @@ See [SECURITY.md](SECURITY.md) for full details.
 └── .lychee.toml                # Link checker config
 ```
 
-## Language Modes
-
-The skill supports two modes for bilingual documentation:
-
-### EN-First Mode (Default)
-
-- `README.md` is the source of truth (English)
-- `README.pt-BR.md` is the translation (Portuguese)
-- Use for: International projects, open-source
-
-### PT-BR-First Mode
-
-- `README.pt-BR.md` is the source of truth (Portuguese)
-- `README.md` is the translation (English)
-- Use for: Local projects, Brazilian companies
-
-Switch modes with:
-
-```bash
-npm run mode:en    # English first
-npm run mode:pt    # Portuguese first
-```
-
 ## Commit Convention
 
 All commits must follow [Conventional Commits](https://conventionalcommits.org):
@@ -199,30 +200,30 @@ All commits must follow [Conventional Commits](https://conventionalcommits.org):
 <type>(<scope>): <description>
 ```
 
-### Types
+### Available Types
 
-- `feat`: New feature (MINOR version bump)
-- `fix`: Bug fix (PATCH version bump)
-- `docs`: Documentation changes
-- `security`: Security fixes
-- `style`: Code style changes
-- `refactor`: Code refactoring
-- `test`: Adding or updating tests
-- `chore`: Maintenance tasks
-- `ci`: CI/CD configuration changes
-- `revert`: Reverting previous commits
+- `feat` - New feature (MINOR version bump)
+- `fix` - Bug fix (PATCH version bump)
+- `docs` - Documentation changes
+- `security` - Security fixes
+- `style` - Code style changes
+- `refactor` - Code refactoring
+- `test` - Adding or updating tests
+- `chore` - Maintenance tasks
+- `ci` - CI/CD configuration changes
+- `revert` - Reverting previous commits
 
 ## Branch Protection Rules
 
 The `main` branch requires:
 
-- ✅ Pull request with minimum 1 approval
-- ✅ Status checks must pass (CI workflow)
-- ✅ Branches must be up to date before merging
-- ✅ Signed commits
-- ✅ Linear history (squash or rebase merge)
-- ❌ No force pushes
-- ❌ No deletions
+- Pull request with minimum 1 approval
+- Status checks must pass (CI workflow)
+- Branches must be up to date before merging
+- Signed commits
+- Linear history (squash or rebase merge)
+- No force pushes
+- No deletions
 
 ## Contributing
 
@@ -230,15 +231,15 @@ We welcome contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for det
 
 ### Contribution Types
 
-- 📝 `doc` - Documentation and translations
-- 💡 `ideas` - Content suggestions and guides
-- 🐛 `bug` - Link corrections and errata
-- 🔧 `tool` - CI/CD, scripts, and automations
-- 🔍 `review` - Pull request reviews
+- `doc` - Documentation and translations
+- `ideas` - Content suggestions and guides
+- `bug` - Link corrections and errata
+- `tool` - CI/CD, scripts, and automations
+- `review` - Pull request reviews
 
 ## Security
 
-Please read [SECURITY.md](SECURITY.md) for:
+See [SECURITY.md](SECURITY.md) for:
 
 - Vulnerability reporting process
 - 4-layer secret protection strategy
@@ -258,4 +259,4 @@ Thanks to all the people who have contributed to this project:
 
 ---
 
-⭐️ If you find this repository helpful, please consider giving it a star!
+If you find this repository helpful, please consider giving it a star!
