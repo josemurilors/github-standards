@@ -1,0 +1,28 @@
+name: All Contributors
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+      - 'README.pt-BR.md'
+
+jobs:
+  update-readme:
+    name: Update Contributors
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'analyticalrohit'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: All Contributors Action
+        uses: BobAnkit/add-contributors@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTRIBUTOR_TYPES: 'doc,ideas,bug,tool,review'
+          README_PATH: 'README.md'
+          COMMIT_MESSAGE: 'docs: Update contributors list [skip ci]'
