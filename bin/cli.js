@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const { init } = require('../src/commands/init');
 const { setup } = require('../src/commands/setup');
 const { validate } = require('../src/commands/validate');
+const { installSkill } = require('../src/commands/install-skill');
 
 const packageJson = require('../package.json');
 
@@ -34,5 +35,11 @@ program
   .command('validate')
   .description('Validate current project configuration')
   .action(validate);
+
+program
+  .command('install-skill')
+  .description('Install skill globally in AI agents (OpenCode, Claude Code, Codex, Cursor, etc)')
+  .option('-a, --all', 'Install to all detected agents without prompting', false)
+  .action(installSkill);
 
 program.parse();
