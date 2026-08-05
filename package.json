@@ -1,5 +1,5 @@
 {
-  "name": "@josemurilors/github-standards",
+  "name": "github-standards-cli",
   "version": "2.1.0",
   "description": "CLI to standardize GitHub repositories with bilingual documentation, CI/CD pipelines, and 4-layer secret security for Vibe Coding",
   "main": "bin/cli.js",
