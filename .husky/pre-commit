@@ -8,6 +8,11 @@
 # 2. Markdown files are properly formatted
 # ============================================
 
+# Skip hooks in CI environments
+if [ -n "$CI" ] || [ -n "$GITHUB_ACTIONS" ]; then
+  exit 0
+fi
+
 set -e
 
 echo "🔍 Running pre-commit checks..."
