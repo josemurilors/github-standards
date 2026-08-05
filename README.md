@@ -18,6 +18,56 @@ This skill standardizes GitHub repositories with bilingual documentation (EN/PT-
 - **Conventional Commits**: Enforced commit message standards with husky + commitlint
 - **Security**: Dependabot, Gitleaks, GitHub Push Protection, and branch protection rules
 - **Automation**: semantic-release for automated versioning and changelog generation
+- **CLI Tool**: Scaffold new projects or apply standards to existing ones
+- **AI Agent Integration**: Install skill globally in OpenCode, Claude Code, Codex, Cursor, and more
+
+## CLI Installation
+
+Install globally to use as a CLI tool:
+
+```bash
+npm install -g @josemurilors/github-standards
+```
+
+### CLI Commands
+
+```bash
+# Initialize a new project with GitHub standards
+github-standards init
+github-standards init --name my-project --mode pt-br-first
+
+# Apply standards to an existing project
+github-standards setup --mode en-first
+
+# Validate current project configuration
+github-standards validate
+
+# Install skill globally in AI agents
+github-standards install-skill
+github-standards install-skill --all
+```
+
+## AI Agent Integration
+
+Install the skill globally in supported AI agents to automatically apply GitHub standards in all your projects:
+
+```bash
+github-standards install-skill
+```
+
+### Supported Agents
+
+| Agent | Status | Directory |
+|-------|--------|-----------|
+| 🔧 OpenCode | ✅ Supported | `~/.agents/skills/` |
+| 🤖 Claude Code | ✅ Supported | `~/.claude/skills/` |
+| 📦 Codex | ✅ Supported | `~/.codex/skills/` |
+| 🎯 Cursor | ✅ Supported | `~/.cursor/skills/` |
+| 🐙 GitHub Copilot | ✅ Supported | `~/.config/github-copilot/skills/` |
+| 🦾 OpenClaude | ✅ Supported | `~/.openclaude/skills/` |
+| ⚡ Hermes | ✅ Supported | `~/.hermes/skills/` |
+
+After installation, the skill will be automatically available in all projects with git.
 
 ## Quick Start
 

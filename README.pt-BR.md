@@ -18,6 +18,56 @@ Esta skill padroniza repositórios GitHub com documentação bilíngue (EN/PT-BR
 - **Conventional Commits**: Padrões de mensagens de commit com husky + commitlint
 - **Segurança**: Dependabot, Gitleaks, GitHub Push Protection e regras de proteção de branch
 - **Automação**: semantic-release para versionamento automático e geração de changelog
+- **Ferramenta CLI**: Crie novos projetos ou aplique padrões em projetos existentes
+- **Integração com Agentes de IA**: Instale a skill globalmente no OpenCode, Claude Code, Codex, Cursor e mais
+
+## Instalação do CLI
+
+Instale globalmente para usar como ferramenta CLI:
+
+```bash
+npm install -g @josemurilors/github-standards
+```
+
+### Comandos do CLI
+
+```bash
+# Inicializar novo projeto com padrões GitHub
+github-standards init
+github-standards init --name meu-projeto --mode pt-br-first
+
+# Aplicar padrões em projeto existente
+github-standards setup --mode pt-br-first
+
+# Validar configuração atual do projeto
+github-standards validate
+
+# Instalar skill globalmente em agentes de IA
+github-standards install-skill
+github-standards install-skill --all
+```
+
+## Integração com Agentes de IA
+
+Instale a skill globalmente nos agentes de IA suportados para aplicar automaticamente os padrões GitHub em todos os seus projetos:
+
+```bash
+github-standards install-skill
+```
+
+### Agentes Suportados
+
+| Agente | Status | Diretório |
+|--------|--------|-----------|
+| 🔧 OpenCode | ✅ Suportado | `~/.agents/skills/` |
+| 🤖 Claude Code | ✅ Suportado | `~/.claude/skills/` |
+| 📦 Codex | ✅ Suportado | `~/.codex/skills/` |
+| 🎯 Cursor | ✅ Suportado | `~/.cursor/skills/` |
+| 🐙 GitHub Copilot | ✅ Suportado | `~/.config/github-copilot/skills/` |
+| 🦾 OpenClaude | ✅ Suportado | `~/.openclaude/skills/` |
+| ⚡ Hermes | ✅ Suportado | `~/.hermes/skills/` |
+
+Após a instalação, a skill estará automaticamente disponível em todos os projetos com git.
 
 ## Início Rápido
 
