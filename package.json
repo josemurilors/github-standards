@@ -41,12 +41,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/josemurilors/boas-praticas-github.git"
+    "url": "https://github.com/josemurilors/github-standards.git"
   },
   "bugs": {
-    "url": "https://github.com/josemurilors/boas-praticas-github/issues"
+    "url": "https://github.com/josemurilors/github-standards/issues"
   },
-  "homepage": "https://github.com/josemurilors/boas-praticas-github#readme",
+  "homepage": "https://github.com/josemurilors/github-standards#readme",
   "dependencies": {
     "chalk": "^4.1.2",
     "commander": "^11.0.0",
