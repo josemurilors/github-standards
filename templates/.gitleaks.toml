@@ -1,0 +1,128 @@
+# ============================================
+# Gitleaks Configuration
+# ============================================
+# Secret detection rules for the repository
+# Docs: https://github.com/gitleaks/gitleaks
+# ============================================
+
+title = "gitleaks config"
+
+[extend]
+useDefault = true
+
+# -------------------------------------------
+# Custom Detection Rules
+# -------------------------------------------
+# These rules detect specific secret patterns common in Vibe Coding
+
+[[rules]]
+id = "openai-api-key"
+description = "OpenAI API Key"
+regex = '''sk-proj-[a-zA-Z0-9]{48,}'''
+tags = ["openai", "api-key"]
+
+[[rules]]
+id = "anthropic-api-key"
+description = "Anthropic API Key"
+regex = '''sk-ant-[a-zA-Z0-9]{32,}'''
+tags = ["anthropic", "api-key"]
+
+[[rules]]
+id = "github-pat"
+description = "GitHub Personal Access Token"
+regex = '''ghp_[a-zA-Z0-9]{36}'''
+tags = ["github", "token"]
+
+[[rules]]
+id = "github-fine-grained-pat"
+description = "GitHub Fine-Grained Personal Access Token"
+regex = '''github_pat_[a-zA-Z0-9]{22}_[a-zA-Z0-9]{59}'''
+tags = ["github", "token"]
+
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key ID"
+regex = '''AKIA[0-9A-Z]{16}'''
+tags = ["aws", "access-key"]
+
+[[rules]]
+id = "aws-secret-key"
+description = "AWS Secret Access Key"
+regex = '''(?i)aws_secret_access_key\s*[:=]\s*['"]?[a-zA-Z0-9/+=]{40}['"]?'''
+tags = ["aws", "secret-key"]
+
+[[rules]]
+id = "stripe-secret-key"
+description = "Stripe Secret Key"
+regex = '''sk_live_[a-zA-Z0-9]{24,}'''
+tags = ["stripe", "api-key"]
+
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key in code"
+regex = '''(?i)(api[_-]?key|api[_-]?secret|access[_-]?token|auth[_-]?token)\s*[:=]\s*['"][a-zA-Z0-9_\-]{20,}['"]'''
+tags = ["generic", "api-key"]
+
+[[rules]]
+id = "private-key"
+description = "Private Key File Content"
+regex = '''-----BEGIN (RSA |EC |DSA |OPENSSH )?PRIVATE KEY-----'''
+tags = ["private-key"]
+
+[[rules]]
+id = "jwt-token"
+description = "JSON Web Token"
+regex = '''eyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}'''
+tags = ["jwt", "token"]
+
+[[rules]]
+id = "connection-string"
+description = "Database Connection String with credentials"
+regex = '''(?i)(mongodb|postgresql|mysql|redis)://[^:]+:[^@]+@[^\s]+'''
+tags = ["database", "connection-string"]
+
+# -------------------------------------------
+# Allowlist Configuration
+# -------------------------------------------
+# IMPORTANT: This allowlist has TWO distinct purposes:
+#
+# 1. PATHS: Excludes entire files/directories from scanning
+#    - .env.example files are templates with placeholders, not real secrets
+#    - node_modules and vendor are third-party dependencies
+#    - .git is internal Git data
+#
+# 2. REGEXES: Excludes specific patterns that match placeholder text
+#    - Covers generic placeholders like "your_api_key_here" scattered across docs
+#    - Does NOT cover specific examples like "sk-proj-xxxx" in README
+#    - For specific inline examples, use <!-- gitleaks:allow --> comments
+#
+# The inline allow (<!-- gitleaks:allow -->) in README.md covers the specific
+# "sk-proj-xxxx" example shown in documentation. This regex allowlist covers
+# generic placeholder patterns. They solve different problems and are NOT redundant.
+
+[allowlist]
+description = "Allowlisted files and placeholder patterns"
+
+# Files and directories to exclude from scanning
+paths = [
+  '''(^|/)\.env\.example$''',
+  '''(^|/)\.env\.sample$''',
+  '''(^|/)\.env\.template$''',
+  '''gitleaks\.toml''',
+  '''(^|/)node_modules/''',
+  '''(^|/)vendor/''',
+  '''(^|/)\.git/''',
+]
+
+# Regex patterns to exclude (generic placeholders only)
+# For specific inline examples (like "sk-proj-xxxx" in README), use <!-- gitleaks:allow -->
+regexes = [
+  '''your[_-]?(api[_-]?key|secret|token|password)[_-]?(here|placeholder)''',
+  '''example[_-]?(api[_-]?key|token|secret)''',
+  '''placeholder[_-]?(key|token|secret)''',
+  '''test[_-]?(api[_-]?key|token|secret)''',
+  '''dummy[_-]?(key|token|secret)''',
+  '''fake[_-]?(key|token|secret)''',
+  '''sample[_-]?(key|token|secret)''',
+  '''AKIAIOSFODNN7EXAMPLE''',  # AWS example key from docs
+]

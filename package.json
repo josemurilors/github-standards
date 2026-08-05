@@ -1,11 +1,19 @@
 {
-  "name": "awesome-vibe-coding-guide",
+  "name": "@josemurilors/github-standards",
   "version": "2.0.0",
-  "private": true,
-  "description": "Awesome Vibe Coding Guide - Multilingual & Standardized with Vibe Coding Security",
+  "description": "CLI to standardize GitHub repositories with bilingual documentation, CI/CD pipelines, and 4-layer secret security for Vibe Coding",
+  "main": "bin/cli.js",
+  "bin": {
+    "github-standards": "./bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ],
   "scripts": {
-    "lint:md": "markdownlint-cli2 '**/*.md' '!node_modules/**/*.md'",
-    "lint:md:fix": "markdownlint-cli2 '**/*.md' '!node_modules/**/*.md' --fix",
+    "lint:md": "markdownlint-cli2 '**/*.md' '!node_modules/**/*.md' '!templates/**/*.md'",
+    "lint:md:fix": "markdownlint-cli2 '**/*.md' '!node_modules/**/*.md' '!templates/**/*.md' --fix",
     "lint:links": "lychee '*.md' '**/*.md'",
     "lint:links:verbose": "lychee --verbose '*.md' '**/*.md'",
     "lint:secrets": "gitleaks detect --source . -v --config .gitleaks.toml",
@@ -15,6 +23,35 @@
     "test": "npm run lint:md && npm run lint:links && npm run lint:secrets",
     "mode:en": "./scripts/set-mode.sh en-first",
     "mode:pt": "./scripts/set-mode.sh pt-br-first"
+  },
+  "keywords": [
+    "github",
+    "git",
+    "ci-cd",
+    "security",
+    "documentation",
+    "bilingual",
+    "conventional-commits",
+    "gitleaks",
+    "vibe-coding",
+    "cli",
+    "scaffold"
+  ],
+  "author": "Jose Murilo <josemurilors@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josemurilors/boas-praticas-github.git"
+  },
+  "bugs": {
+    "url": "https://github.com/josemurilors/boas-praticas-github/issues"
+  },
+  "homepage": "https://github.com/josemurilors/boas-praticas-github#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.0",
