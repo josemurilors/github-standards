@@ -7,6 +7,7 @@ const {
   copyTemplates,
   generatePackageJson,
   setLanguageMode,
+  swapReadmes,
   printCopyResult
 } = require('../utils/copy-files');
 
@@ -50,6 +51,10 @@ async function init(options) {
     console.log(chalk.cyan('\n🌐 Setting language mode...'));
     await setLanguageMode(targetDir, projectInfo.mode);
     console.log(chalk.green(`  ✓ Mode set to: ${projectInfo.mode}`));
+
+    console.log(chalk.cyan('\n📄 Swapping READMEs based on language mode...'));
+    await swapReadmes(targetDir, projectInfo.mode);
+    console.log(chalk.green('  ✓ READMEs swapped'));
 
     console.log(chalk.cyan('\n📦 Initializing git repository...'));
     try {

@@ -6,6 +6,7 @@ const { promptConfirm, promptOverwrite } = require('../utils/prompts');
 const {
   copyTemplates,
   setLanguageMode,
+  swapReadmes,
   checkExistingFiles,
   printCopyResult
 } = require('../utils/copy-files');
@@ -52,6 +53,10 @@ async function setup(options) {
     console.log(chalk.cyan('\n🌐 Setting language mode...'));
     await setLanguageMode(targetDir, mode);
     console.log(chalk.green(`  ✓ Mode set to: ${mode}`));
+
+    console.log(chalk.cyan('\n📄 Swapping READMEs based on language mode...'));
+    await swapReadmes(targetDir, mode);
+    console.log(chalk.green('  ✓ READMEs swapped'));
 
     console.log(chalk.cyan('\n📦 Installing dependencies...'));
     try {

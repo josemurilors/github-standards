@@ -116,6 +116,19 @@ async function setLanguageMode(targetDir, mode) {
   );
 }
 
+async function swapReadmes(targetDir, mode) {
+  const readmePath = path.join(targetDir, 'README.md');
+  const readmePtBrPath = path.join(targetDir, 'README.pt-BR.md');
+
+  if (mode === 'pt-br-first') {
+    const tempContent = await fs.readFile(readmePath, 'utf-8');
+    const ptBrContent = await fs.readFile(readmePtBrPath, 'utf-8');
+
+    await fs.writeFile(readmePath, ptBrContent, 'utf-8');
+    await fs.writeFile(readmePtBrPath, tempContent, 'utf-8');
+  }
+}
+
 async function checkExistingFiles(targetDir) {
   const existing = [];
 
@@ -145,6 +158,7 @@ module.exports = {
   copyTemplates,
   generatePackageJson,
   setLanguageMode,
+  swapReadmes,
   checkExistingFiles,
   printCopyResult,
   TEMPLATE_FILES
