@@ -26,7 +26,7 @@ This skill standardizes GitHub repositories with bilingual documentation (EN/PT-
 Install globally to use as a CLI tool:
 
 ```bash
-npm install -g @josemurilors/github-standards
+npm install -g github-standards-cli
 ```
 
 ### CLI Commands

@@ -26,7 +26,7 @@ Esta skill padroniza repositórios GitHub com documentação bilíngue (EN/PT-BR
 Instale globalmente para usar como ferramenta CLI:
 
 ```bash
-npm install -g @josemurilors/github-standards
+npm install -g github-standards-cli
 ```
 
 ### Comandos do CLI
