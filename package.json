@@ -1,6 +1,6 @@
 {
   "name": "github-standards-cli",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "CLI to standardize GitHub repositories with bilingual documentation, CI/CD pipelines, and 4-layer secret security for Vibe Coding",
   "main": "bin/cli.js",
   "bin": {

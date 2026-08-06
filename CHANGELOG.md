@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/josemurilors/github-standards/compare/v2.3.0...v2.4.0) (2026-08-06)
+
+
+### Features
+
+* change README naming convention for bilingual docs ([fb8c205](https://github.com/josemurilors/github-standards/commit/fb8c20532f979032310d4d71dcdda6aa167ba8a6))
+
 # [2.3.0](https://github.com/josemurilors/github-standards/compare/v2.2.0...v2.3.0) (2026-08-05)
 
 ## Features
