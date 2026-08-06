@@ -7,8 +7,7 @@
 
 # [2.2.0](https://github.com/josemurilors/github-standards/compare/v2.1.1...v2.2.0) (2026-08-05)
 
-
-### Bug Fixes
+## Bug Fixes
 
 * add NODE_AUTH_TOKEN for npm registry authentication ([8d0b1f8](https://github.com/josemurilors/github-standards/commit/8d0b1f810074e4a8244ace59cbe4161c046fc1e2))
 * correct repository URLs in package.json ([6b847ce](https://github.com/josemurilors/github-standards/commit/6b847ce8a7ea08d680c1bbcfc73ca9491ecaeb90))
@@ -17,12 +16,9 @@
 * skip pre-commit hooks in CI environment ([d57d2c8](https://github.com/josemurilors/github-standards/commit/d57d2c83cbff8987b7da1768cc870a69ce71a846))
 * track package-lock.json for npm ci in release workflow ([6cf028d](https://github.com/josemurilors/github-standards/commit/6cf028dac89ff26b98f51f38661bf01b9b226da3))
 
-
-### Features
+## Features
 
 * add npm publishing to semantic-release ([adf071c](https://github.com/josemurilors/github-standards/commit/adf071ccca9a456093849d233ce4a7206f5c4efc))
-
-# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -31,50 +27,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
+## Added
 
-- Initial project structure
-- Bilingual README support (EN/PT-BR)
-- CI/CD pipeline with GitHub Actions
-- Conventional Commits enforcement
-- Markdown linting and link checking
-- Branch protection rules documentation
-- Contributor Covenant Code of Conduct
-- Security policy and vulnerability reporting process
-- Automated semantic-release configuration
-- All-contributors bot integration
+* Initial project structure
+* Bilingual README support (EN/PT-BR)
+* CI/CD pipeline with GitHub Actions
+* Conventional Commits enforcement
+* Markdown linting and link checking
+* Branch protection rules documentation
+* Contributor Covenant Code of Conduct
+* Security policy and vulnerability reporting process
+* Automated semantic-release configuration
+* All-contributors bot integration
 
-### Changed
+## Changed
 
-- N/A
+* N/A
 
-### Deprecated
+## Deprecated
 
-- N/A
+* N/A
 
-### Removed
+## Removed
 
-- N/A
+* N/A
 
-### Fixed
+## Fixed
 
-- N/A
+* N/A
 
-### Security
+## Security
 
-- N/A
+* N/A
 
 ---
 
 ## [1.0.0] - Initial Release
 
-### Added
+## New Features
 
-- Original project documentation
-- Setup and planning guide
-- Coding and prompting guide
-- Testing and debugging guide
-- Version and deployment guide
+* Original project documentation
+* Setup and planning guide
+* Coding and prompting guide
+* Testing and debugging guide
+* Version and deployment guide
 
 ---
 
@@ -82,34 +78,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This project uses [Semantic Versioning](https://semver.org/):
 
-- **MAJOR** version: Incompatible API changes or breaking changes to contribution process
-- **MINOR** version: Backward-compatible functionality additions (new features)
-- **PATCH** version: Backward-compatible bug fixes
+* **MAJOR** version: Incompatible API changes or breaking changes to contribution process
+* **MINOR** version: Backward-compatible functionality additions (new features)
+* **PATCH** version: Backward-compatible bug fixes
 
-### What Constitutes Each Version Type
+## What Constitutes Each Version Type
 
-#### MAJOR (2.0.0, 3.0.0, etc.)
+## MAJOR (2.0.0, 3.0.0, etc.)
 
-- Breaking changes to contribution workflow
-- Removal of supported features
-- Changes to commit convention that break existing commits
-- Major restructuring of documentation
+* Breaking changes to contribution workflow
+* Removal of supported features
+* Changes to commit convention that break existing commits
+* Major restructuring of documentation
 
-#### MINOR (2.1.0, 2.2.0, etc.)
+## MINOR (2.1.0, 2.2.0, etc.)
 
-- New documentation sections
-- Additional language support
-- New CI/CD checks
-- New contribution types
-- Backward-compatible improvements
+* New documentation sections
+* Additional language support
+* New CI/CD checks
+* New contribution types
+* Backward-compatible improvements
 
-#### PATCH (2.0.1, 2.0.2, etc.)
+## PATCH (2.0.1, 2.0.2, etc.)
 
-- Bug fixes in documentation
-- Link corrections
-- Typo fixes
-- Minor clarifications
-- Security patches
+* Bug fixes in documentation
+* Link corrections
+* Typo fixes
+* Minor clarifications
+* Security patches
 
 ## Release Process
 
@@ -121,7 +117,7 @@ Releases are automated via [semantic-release](https://github.com/semantic-releas
 4. GitHub Release is created with release notes
 5. Tags are created automatically
 
-### Commit Types and Their Impact
+## Commit Types and Their Impact
 
 | Commit Type | Version Bump | Example |
 |-------------|--------------|---------|

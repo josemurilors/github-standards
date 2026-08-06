@@ -1,10 +1,10 @@
 {
-  "mode": "en-first",
+  "mode": "pt-br-first",
   "description": "Language mode configuration for the repository",
-  "primary_language": "en",
-  "secondary_language": "pt-BR",
-  "source_of_truth": "README.md",
-  "translation_file": "README.pt-BR.md",
+  "primary_language": "pt-BR",
+  "secondary_language": "en",
+  "source_of_truth": "README.pt-BR.md",
+  "translation_file": "README.md",
   "modes": {
     "en-first": {
       "primary": "README.md",
