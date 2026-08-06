@@ -1,11 +1,10 @@
 # [2.3.0](https://github.com/josemurilors/github-standards/compare/v2.2.0...v2.3.0) (2026-08-05)
 
-
-### Features
+## Features
 
 * swap READMEs based on language mode ([0aff9d0](https://github.com/josemurilors/github-standards/commit/0aff9d0b3b81b8a8f880cc4c6f2abf0fb4a40e5b))
 
-# [2.2.0](https://github.com/josemurilors/github-standards/compare/v2.1.1...v2.2.0) (2026-08-05)
+## [2.2.0](https://github.com/josemurilors/github-standards/compare/v2.1.1...v2.2.0) (2026-08-05)
 
 ## Bug Fixes
 
@@ -16,7 +15,7 @@
 * skip pre-commit hooks in CI environment ([d57d2c8](https://github.com/josemurilors/github-standards/commit/d57d2c83cbff8987b7da1768cc870a69ce71a846))
 * track package-lock.json for npm ci in release workflow ([6cf028d](https://github.com/josemurilors/github-standards/commit/6cf028dac89ff26b98f51f38661bf01b9b226da3))
 
-## Features
+## New Features
 
 * add npm publishing to semantic-release ([adf071c](https://github.com/josemurilors/github-standards/commit/adf071ccca9a456093849d233ce4a7206f5c4efc))
 
@@ -64,7 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - Initial Release
 
-## New Features
+## Additional Features
 
 * Original project documentation
 * Setup and planning guide

@@ -1,7 +1,7 @@
 # GitHub Standards Skill
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](README.pt-BR.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](README-PT-BR.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Secret Scanning](https://img.shields.io/badge/Secret%20Scanning-Gitleaks-brightgreen)](SECURITY.md)
@@ -103,7 +103,7 @@ See [SECURITY.md](SECURITY.md) for full details.
 ├── scripts/
 │   └── set-mode.sh             # Language mode switcher
 ├── README.md                   # English documentation
-├── README.pt-BR.md             # Portuguese documentation
+├── README-PT-BR.md             # Portuguese documentation
 ├── CONTRIBUTING.md             # Contribution guidelines
 ├── CODE_OF_CONDUCT.md          # Community standards
 ├── SECURITY.md                 # Security policy + 4-layer defense
@@ -125,12 +125,12 @@ The skill supports two modes for bilingual documentation:
 ### EN-First Mode (Default)
 
 - `README.md` is the source of truth (English)
-- `README.pt-BR.md` is the translation (Portuguese)
+- `README-PT-BR.md` is the translation (Portuguese)
 - Use for: International projects, open-source
 
 ### PT-BR-First Mode
 
-- `README.pt-BR.md` is the source of truth (Portuguese)
+- `README-PT-BR.md` is the source of truth (Portuguese)
 - `README.md` is the translation (English)
 - Use for: Local projects, Brazilian companies
 

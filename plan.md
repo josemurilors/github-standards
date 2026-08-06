@@ -29,7 +29,7 @@ This document outlines the execution plan for implementing the GitHub Standards 
 #### Files Created
 
 - [x] `README.md` - English documentation with language selector
-- [x] `README.pt-BR.md` - Portuguese documentation (structural parity)
+- [x] `README-PT-BR.md` - Portuguese documentation (structural parity)
 - [x] `CONTRIBUTING.md` - Contribution guidelines with branch protection rules
 - [x] `CODE_OF_CONDUCT.md` - Contributor Covenant v2.1
 - [x] `SECURITY.md` - Security policy and vulnerability reporting
@@ -123,12 +123,12 @@ npm test                 # Run all validations
 **EN-First Mode** (default):
 
 - `README.md` is the source of truth (English)
-- `README.pt-BR.md` is the translation (Portuguese)
+- `README-PT-BR.md` is the translation (Portuguese)
 - Use for: International projects, open-source
 
 **PT-BR-First Mode**:
 
-- `README.pt-BR.md` is the source of truth (Portuguese)
+- `README-PT-BR.md` is the source of truth (Portuguese)
 - `README.md` is the translation (English)
 - Use for: Local projects, Brazilian companies
 
@@ -233,7 +233,7 @@ awesome-vibe-coding-guide/
 │   └── set-mode.sh                   # Language mode switcher
 ├── assets/                           # Images and media
 ├── README.md                         # English documentation
-├── README.pt-BR.md                   # Portuguese documentation
+├── README-PT-BR.md                   # Portuguese documentation
 ├── CONTRIBUTING.md                   # Contribution guidelines
 ├── CODE_OF_CONDUCT.md                # Community standards
 ├── SECURITY.md                       # Security policy + 4-layer defense

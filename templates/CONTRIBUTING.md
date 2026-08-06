@@ -123,11 +123,11 @@ This repository supports two language modes for bilingual documentation:
 ### EN-First Mode (Default)
 
 - `README.md` is the source of truth (English)
-- `README.pt-BR.md` is the translation (Portuguese)
+- `README-PT-BR.md` is the translation (Portuguese)
 
 ### PT-BR-First Mode
 
-- `README.pt-BR.md` is the source of truth (Portuguese)
+- `README-PT-BR.md` is the source of truth (Portuguese)
 - `README.md` is the translation (English)
 
 **Switch modes**:
@@ -234,7 +234,7 @@ These files are automatically ignored by Git:
 When adding new environment variables:
 
 1. Add to `.env.example` with placeholder value
-2. Document in README.md and README.pt-BR.md
+2. Document in README.md and README-PT-BR.md
 3. Never use real credentials in examples
 
 **Example**:

@@ -3,17 +3,17 @@
   "description": "Language mode configuration for the repository",
   "primary_language": "pt-BR",
   "secondary_language": "en",
-  "source_of_truth": "README.pt-BR.md",
-  "translation_file": "README.md",
+  "source_of_truth": "README.md",
+  "translation_file": "README-ENG.md",
   "modes": {
     "en-first": {
       "primary": "README.md",
-      "secondary": "README.pt-BR.md",
+      "secondary": "README-PT-BR.md",
       "description": "English is the source of truth, Portuguese is the translation"
     },
     "pt-br-first": {
-      "primary": "README.pt-BR.md",
-      "secondary": "README.md",
+      "primary": "README.md",
+      "secondary": "README-ENG.md",
       "description": "Portuguese is the source of truth, English is the translation"
     }
   }

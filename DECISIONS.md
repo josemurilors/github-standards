@@ -21,7 +21,7 @@ Implement a bilingual documentation strategy with English (EN) as the primary la
 **Approach**: Separate files
 
 - `README.md` - English (source of truth)
-- `README.pt-BR.md` - Portuguese (translation)
+- `README-PT-BR.md` - Portuguese (translation)
 
 **Scope**: README only for v2.0.0. Internal guides will be translated gradually based on community demand.
 
@@ -116,7 +116,7 @@ Need to ensure structural consistency between EN and PT-BR README files.
 
 ```bash
 EN_COUNT=$(grep -E '^#{1,3} ' README.md | wc -l)
-PT_COUNT=$(grep -E '^#{1,3} ' README.pt-BR.md | wc -l)
+PT_COUNT=$(grep -E '^#{1,3} ' README-PT-BR.md | wc -l)
 if [ "$EN_COUNT" -ne "$PT_COUNT" ]; then exit 1; fi
 ```
 
@@ -126,7 +126,7 @@ if [ "$EN_COUNT" -ne "$PT_COUNT" ]; then exit 1; fi
 
 ```bash
 EN_STRUCT=$(grep -E '^#{1,3} ' README.md | sed 's/^#* //')
-PT_STRUCT=$(grep -E '^#{1,3} ' README.pt-BR.md | sed 's/^#* //')
+PT_STRUCT=$(grep -E '^#{1,3} ' README-PT-BR.md | sed 's/^#* //')
 if [ "$EN_STRUCT" != "$PT_STRUCT" ]; then exit 1; fi
 ```
 
@@ -514,7 +514,7 @@ Need to support repositories that prioritize Portuguese over English (local proj
 {
   "mode": "en-first",
   "source_of_truth": "README.md",
-  "translation_file": "README.pt-BR.md"
+  "translation_file": "README-PT-BR.md"
 }
 ```
 

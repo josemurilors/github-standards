@@ -1,7 +1,7 @@
 # GitHub Standards Skill
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](README.pt-BR.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](README-PT-BR.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 [![Secret Scanning](https://img.shields.io/badge/Secret%20Scanning-Gitleaks-brightgreen)](SECURITY.md)
@@ -103,7 +103,7 @@ Veja [SECURITY.md](SECURITY.md) para detalhes completos.
 ├── scripts/
 │   └── set-mode.sh             # Alternador de modo de idioma
 ├── README.md                   # Documentação em inglês
-├── README.pt-BR.md             # Documentação em português
+├── README-PT-BR.md             # Documentação em português
 ├── CONTRIBUTING.md             # Diretrizes de contribuição
 ├── CODE_OF_CONDUCT.md          # Padrões da comunidade
 ├── SECURITY.md                 # Política de segurança + defesa 4 camadas
@@ -125,12 +125,12 @@ A skill suporta dois modos para documentação bilíngue:
 ### Modo EN-First (Padrão)
 
 - `README.md` é a fonte da verdade (Inglês)
-- `README.pt-BR.md` é a tradução (Português)
+- `README-PT-BR.md` é a tradução (Português)
 - Use para: Projetos internacionais, open-source
 
 ### Modo PT-BR-First
 
-- `README.pt-BR.md` é a fonte da verdade (Português)
+- `README-PT-BR.md` é a fonte da verdade (Português)
 - `README.md` é a tradução (Inglês)
 - Use para: Projetos locais, empresas brasileiras
 

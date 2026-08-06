@@ -32,13 +32,13 @@ Use esta skill quando:
 ### EN-First (Padrão)
 
 - `README.md` é a fonte da verdade (Inglês)
-- `README.pt-BR.md` é a tradução
+- `README-PT-BR.md` é a tradução
 - Use para: projetos internacionais, open-source
 
 ### PT-BR-First
 
-- `README.pt-BR.md` é a fonte da verdade (Português)
-- `README.md` é a tradução
+- `README.md` é a fonte da verdade (Português)
+- `README-ENG.md` é a tradução
 - Use para: projetos locais, empresas brasileiras
 
 ## Estrutura Gerada
@@ -58,8 +58,9 @@ projeto/
 ├── scripts/
 │   ├── set-mode.sh             # Language mode switcher
 │   └── verify-gitignore.sh     # Gitignore verification
-├── README.md                   # English documentation
-├── README.pt-BR.md             # Portuguese documentation
+├── README.md                   # Source of truth (language depends on mode)
+├── README-PT-BR.md             # Portuguese translation (EN-First mode)
+├── README-ENG.md               # English translation (PT-BR-First mode)
 ├── CONTRIBUTING.md             # Contribution guidelines
 ├── CODE_OF_CONDUCT.md          # Contributor Covenant v2.1
 ├── SECURITY.md                 # 4-layer secret defense
