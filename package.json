@@ -51,7 +51,7 @@
     "chalk": "^4.1.2",
     "commander": "^11.0.0",
     "fs-extra": "^11.2.0",
-    "inquirer": "^8.2.6"
+    "inquirer": "^14.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.0",
